@@ -1,0 +1,18 @@
+{
+  "name": "cortes-blog",
+  "version": "1.0.0",
+  "description": "A blog for Daniel Cortes. Personal as well as portfolio usage.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Cortes",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.16",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  }
+}
