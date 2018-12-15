@@ -3,6 +3,9 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const passport = require('passport')
 
+const users = require('./routes/api/users')
+const posts = require('./routes/api/posts')
+
 const app = express()
 
 // Body parser middleware
@@ -23,6 +26,11 @@ app.use(passport.initialize())
 
 // passport Config
 require('./config/passport')(passport)
+
+app.use('./api/users', users)
+app.use('./api/posts', posts)
+
+app.get('/', (req, res) => res.send('Hello world'))
 
 const port = process.env.PORT || 5000
 
