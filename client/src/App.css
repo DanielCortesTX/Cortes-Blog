@@ -2,6 +2,10 @@ img {
   width: 100%;
 }
 
+.register-log {
+  height: 80vh;
+}
+
 .landing {
   position: relative;
   background: url('img/perspective.JPG');

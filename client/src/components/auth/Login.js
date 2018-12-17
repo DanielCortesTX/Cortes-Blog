@@ -33,21 +33,40 @@ class Login extends Component {
     return (
       <div className="login">
         <div className="container">
-          <div className="row">
-            <div>
-              <h1 className="text-center display-5">
-              Log In
-              </h1>
-              <p className=" lead text-center">Sign in to comment and like posts</p>
-              <form>
-                <div>
-                  <input 
-                    type="username"
-                    className="form-control form-control-md"
-                  />
-                </div>
-              </form>
-            </div>
+          <div className="m-auto">
+            <h1 className="text-center display-5">
+            Log In
+            </h1>
+            <p className=" lead
+            text-center">Sign in to comment
+            and like posts</p>
+            <form onSubmit={this.onSubmit}>
+              <div className="form-group">
+                <input 
+                  type="text"
+                  className="form-control
+                  form-control-md"
+                  placeholder="Username"
+                  name="username"
+                  value={this.state.username}
+                  onChange={this.onChange}
+                />
+              </div>
+              <div className="form-group">
+                <input 
+                  type="password"
+                  className="form-control form-control-lg"
+                  placeholder="Password"
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.onChange}
+                />
+              </div>
+              <input 
+                type="submit"
+                className="btn btn-outline-primary mb-4"
+              />
+            </form>
           </div>
         </div>
       </div>
