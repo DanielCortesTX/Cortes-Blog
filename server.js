@@ -10,7 +10,7 @@ const app = express()
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json)
+app.use(bodyParser.json())
 
 // DB Config
 const db = require('./config/keys').mongoURI
@@ -27,8 +27,8 @@ app.use(passport.initialize())
 // passport Config
 require('./config/passport')(passport)
 
-app.use('./api/users', users)
-app.use('./api/posts', posts)
+app.use('/api/users', users)
+app.use('/api/posts', posts)
 
 app.get('/', (req, res) => res.send('Hello world'))
 

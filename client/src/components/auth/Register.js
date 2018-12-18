@@ -63,7 +63,7 @@ class Register extends Component {
                 <input 
                   type="text"
                   className={classnames('form-control form-control-lg', {
-                    'isInvalid': errors.username
+                    'is-invalid': errors.username
                   })}
                   placeholder="Username"
                   name="username"
@@ -78,7 +78,7 @@ class Register extends Component {
                 <input 
                   type="password"
                   className={classnames('form-control form-control-lg', {
-                    'isInvalid': errors.password
+                    'is-invalid': errors.password
                   })}
                   placeholder="Password"
                   name="password"
@@ -93,7 +93,7 @@ class Register extends Component {
                 <input 
                   type="password"
                   className={classnames('form-control form-control-lg', {
-                    'isInvalid': errors.password2
+                    'is-invalid': errors.password2
                   })}
                   placeholder="Confirm Password"
                   name="password2"
@@ -122,9 +122,9 @@ Register.propTypes = {
   errors: PropTypes.object.isRequired
 }
 
-const mapStateToProps = ({auth, errors}) => ({
-  auth,
-  errors
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
 })
 
 export default connect(mapStateToProps, { registerUser })(withRouter(Register))
