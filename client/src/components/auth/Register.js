@@ -19,6 +19,12 @@ class Register extends Component {
     this.onSubmit = this.onSubmit.bind(this)
   }
 
+  componentDidMount() {
+    if(this.props.auth.isAuthenticated) {
+      this.props.history.push('/')
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
     if(nextProps.errors) {
       this.setState({
@@ -42,12 +48,9 @@ class Register extends Component {
       password2: this.state.password2
     }
 
-    console.log('yes')
-
     this.props.registerUser(newUser, this.props.history)
-
-    console.log(newUser)
   }
+
   render() {
     const { errors } = this.state
 
