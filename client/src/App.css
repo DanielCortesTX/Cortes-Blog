@@ -6,13 +6,17 @@ img {
   height: 80vh;
 }
 
+.p-counter {
+  margin: 0px;
+} 
+
 .landing {
-  position: relative;
+  /* position: relative; */
   background: url('img/perspective.JPG');
   background-size: cover;
   background-position: center;
   height:80vh;
-  margin-top: -20px;
+  /* margin-top: -20px; */
   /* margin-bottom: -30px; */
 }
 

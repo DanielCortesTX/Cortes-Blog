@@ -15,7 +15,13 @@ class NavBar extends Component {
 
     const loggedIn = (
       <ul className="navbar-nav ml-auto">
-        <li className="nav-item">
+        {user.username === 'Solidus' && <li className="nav-link">
+          <Link
+            className="nav-link p-counter"
+            to="/create-post"
+          >Create post</Link>
+        </li>}
+        <li className="nav-link">
           <a
             href="#"
             onClick={this.onLogoutClick.bind(this)}
@@ -23,8 +29,10 @@ class NavBar extends Component {
             Logout
           </a>
         </li>
-        <li>
-          <p>Hello {user.username}</p>
+        <li className="nav-link">
+          <p
+            className="navbar-text p-counter"
+          >Hello {user.username}</p>
         </li>
       </ul>
     )
@@ -45,14 +53,14 @@ class NavBar extends Component {
     )
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-light mb-4">
+      <nav className="navbar navbar-expand-sm bg-secondary navbar-dark">
         <div className="container">
           <Link className="navbar-brand" to="/">HomeFree</Link>
 
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/home">Home</Link>
               </li>
             </ul>
             {isAuthenticated ? loggedIn : unlogged}
