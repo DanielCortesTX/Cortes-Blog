@@ -33,7 +33,15 @@ const PostSchema = new Schema({
         default: Date.now
       }
     }
-  ]
+  ],
+  text: {
+    type: String,
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  }
 })
 
 module.exports = Post = mongoose.model('posts',

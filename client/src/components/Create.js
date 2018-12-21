@@ -1,6 +1,19 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
-export default class CreatePost extends Component {
+
+class CreatePost extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      title: '',
+      text: ''
+    }
+
+    this.onChange = this.onChange.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
+  }
   render() {
     return (
       <div>
@@ -9,3 +22,5 @@ export default class CreatePost extends Component {
     )
   }
 }
+
+export default CreatePost
