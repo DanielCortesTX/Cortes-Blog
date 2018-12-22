@@ -18,7 +18,7 @@ router.get('/test', (req, res) => res.json({ msg: 'Posts works'}))
 // @desc   Create Blog post
 // @access Private
 router.post(
-  '/create-post', 
+  '/', 
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     const { errors, isValid } = validatePostInput(req.body)
