@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
-// import { registerUser } from '../../actions/authActions'
+import { addPost } from '../actions/postActions'
 
 
 class CreatePost extends Component {
@@ -37,11 +37,11 @@ class CreatePost extends Component {
     e.preventDefault()
 
     const newPost = {
-      text: this.state.text,
-      title: this.state.title
+      title: this.state.title,
+      text: this.state.text
     }
 
-    // this.props.addPost(newUser, this.props.history)
+    this.props.addPost(newPost, this.props.history)
     console.log(newPost)
   }
 
@@ -61,30 +61,30 @@ class CreatePost extends Component {
               <input 
                 type="text"
                 className={classnames('form-control form-control-lg', {
-                  'is-invalid': errors.text
+                  'is-invalid': errors.title
                 })}
-                placeholder="Text"
+                placeholder="Title"
+                name="title"
+                value={this.state.title}
+                onChange={this.onChange}
+              />
+              {errors.title && (<div
+                className="invalid-feedback">
+                {errors.title}</div>)}
+            </div>
+            <div className="form-group">
+              <textarea 
+                className={classnames('form-control form-control-lg', {
+                  'is-invalid': errors.title
+                })}
+                placeholder="Make post here."
                 name="text"
                 value={this.state.text}
                 onChange={this.onChange}
               />
               {errors.text && (<div
-                className="invalid-feedback">
-                {errors.text}</div>)}
-            </div>
-            <div className="form-group">
-              <textarea 
-                className={classnames('form-control form-control-lg', {
-                  'is-invalid': errors.password2
-                })}
-                placeholder="Confirm Password"
-                name="Post here"
-                value={this.state.password2}
-                onChange={this.onChange}
-              />
-              {errors.password2 && (<div
               className="invalid-feedback">
-              {errors.password2}</div>)}
+              {errors.text}</div>)}
             </div>
             <input 
                 type="submit"
@@ -105,8 +105,10 @@ CreatePost.propTypes = {
   errors: PropTypes.object.isRequired
 }
 
-const mapStateToProps = ({errors}) => ({
-  errors
-})
+function mapStateToProps({ errors }){
+  return {
+    errors
+  }
+}
 
-export default connect(mapStateToProps)(withRouter(CreatePost))
+export default connect(mapStateToProps, { addPost })(withRouter(CreatePost))

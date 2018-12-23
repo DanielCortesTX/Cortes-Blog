@@ -12,7 +12,7 @@ import Landing from './components/layout/Landing'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Home from './components/home/Home'
-import CreatePost from './components/Create'
+import CreatePost from './components/CreatePost'
 
 import './App.css'
 import PrivateRoute from './components/frequents/PrivateRoute';
