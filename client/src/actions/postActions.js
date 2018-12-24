@@ -24,7 +24,7 @@ export const addPost = (newPost, history) => (dispatch) => {
 // Get posts
 export const getPosts = () => dispatch => {
   dispatch(setPostLoading())
-  axios.get('api/posts')
+  axios.get('/api/posts')
     .then(res => 
       dispatch({
         type: GET_POSTS,
@@ -42,7 +42,7 @@ export const getPosts = () => dispatch => {
 // Get specific post
 export const getPost = (id) => dispatch => {
   dispatch(setPostLoading())
-  axios.get(`api/posts/${id}`)
+  axios.get(`/api/posts/${id}`)
     .then(res => {
       dispatch({
         type: GET_POST,

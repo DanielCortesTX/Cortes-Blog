@@ -27,7 +27,7 @@ router.get(
   }
 )
 
-// @route  GET api/posts
+// @route  GET api/posts/:id
 // @desc   Get all Blog posts
 // @access Public
 router.get(

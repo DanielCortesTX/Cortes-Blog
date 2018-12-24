@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import BlogLink from './BlogLink'
 import { getPosts } from '../../actions/postActions'
 
 class Home extends Component {
@@ -17,12 +18,12 @@ class Home extends Component {
     if(posts === null || loading){
       postFeed = <h3>Loading...</h3>
     } else {
-      postFeed = posts.map((post) => <p>{post.text}</p>)
+      postFeed = posts.map((post) => <BlogLink key={post._id} post={post}/>)
     }
 
     return (
-      <div>
-        <h1>This is the dashboard</h1>
+      <div className="container">
+        <h1 className="text-center text-uppercase">Cortes Corner</h1>
           {postFeed}
       </div>
     )

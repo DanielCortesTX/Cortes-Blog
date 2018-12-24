@@ -32,6 +32,19 @@ img {
   width: 100%;
 }
 
+.post-display {
+  padding: 10px 20px;
+}
+
+
+.card-mods {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-space {
+  padding: 10px;
+}
 /* .card-form {
   opacity: 0.9;
 }

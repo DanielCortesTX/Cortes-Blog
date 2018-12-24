@@ -12,6 +12,7 @@ import Landing from './components/layout/Landing'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Home from './components/home/Home'
+import PostPage from './components/home/PostPage'
 import CreatePost from './components/CreatePost'
 
 import './App.css'
@@ -50,6 +51,7 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login}/>
               <Route exact path="/home" component={Home}/>
+              <Route exact path="/post-display/:id" component={PostPage}/>
               <Switch>
                 <PrivateRoute 
                   exact 
