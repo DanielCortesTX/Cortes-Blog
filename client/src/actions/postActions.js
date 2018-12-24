@@ -57,6 +57,24 @@ export const getPost = (id) => dispatch => {
     )
 }
 
+// Add Comment
+export const addComment = (postId, newComment) => dispatch => {
+  dispatch(clearErrors())
+  axios.post(`/api/posts/comment/${postId}`, newComment)
+    .then(res => 
+      dispatch({
+        type: GET_POST,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+     })
+    )  
+}
+
 // Set loading page
 export const setPostLoading = () => {
   return {

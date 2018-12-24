@@ -8,6 +8,7 @@ const Post = require('../../models/Post')
 
 // Validation
 const validatePostInput = require('../../validation/post')
+const validateCommentInput = require('../../validation/comment')
 
 // @route  GET api/users/test
 // @desc   Tests users route
@@ -62,9 +63,33 @@ router.post(
   }
 )
 
-// @route  GET api/posts
-// @desc   Create Blog post
+// @route  GET api/posts/comment/:id
+// @desc   Add comment to post
 // @access Private
-router.get('/test', (req, res) => res.json({ msg: 'Posts works'}))
+router.post(
+  '/comment/:id',
+  passport.authenticate('jwt', { session: false }), 
+  (req, res) => {
+    const { errors, isValid } = validateCommentInput(req.body)
+
+    // Check validation
+    if(!isValid){
+      return res.status(400).json(errors)
+    }
+    Post.findById(req.params.id)
+      .then(post => {
+        const newComment = {
+          text: req.body.text,
+          username: req.body.username,
+          user: req.user.id
+        }
+
+        post.comments.push(newComment)
+
+        post.save().then(post => res.json(post))
+      })
+      .catch(err => res.status(404).json({ nopostfound: 'No post found'}))
+  }
+)
 
 module.exports = router
