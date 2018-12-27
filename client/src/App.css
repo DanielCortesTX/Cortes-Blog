@@ -32,6 +32,11 @@ img {
   width: 100%;
 }
 
+.comment-header {
+  display: flex;
+  flex-direction: row;
+}
+
 .post-display {
   padding: 10px 20px;
 }

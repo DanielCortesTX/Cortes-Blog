@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getPost } from '../../actions/postActions'
+import { getPost, addLike } from '../../actions/postActions'
 import PostDisplay from './PostDisplay'
 import CommentForm from './CommentForm'
 import CommentFeed from './CommentFeed'
@@ -10,6 +10,10 @@ class PostPage extends Component {
     console.log(this.props.match.params.id)
     this.props.getPost(this.props.match.params.id)
   }
+  // clickLike (id) {
+  //   console.log(id)
+  //   addLike('yes')
+  // }
   render() {
     const { post, loading, isAuthed } = this.props
     let postDisplay
@@ -20,7 +24,7 @@ class PostPage extends Component {
       postDisplay = (
         <div>
           <PostDisplay post={post}/>
-          {isAuthed ? <CommentForm postId={post._id}/> : null}
+          {isAuthed ? <CommentForm postId={post._id}/> : <h3 className="display-5 mb-3">Sign in to make comments</h3>}
           <CommentFeed comments={post.comments}/>
         </div>
       )
@@ -41,4 +45,4 @@ const mapStateToProps = ({ auth, post }) => ({
   loading: post.loading
 })
 
-export default connect(mapStateToProps, { getPost })(PostPage)
+export default connect(mapStateToProps, { getPost, addLike })(PostPage)

@@ -57,6 +57,24 @@ export const getPost = (id) => dispatch => {
     )
 }
 
+// add like
+export const addLike = (id) => dispatch => {
+  axios.post(`/api/posts/like/${id}`)
+    .then(res => dispatch(getPosts()))
+    .catch(err =>
+      dispatch({
+        type: GET_POST,
+        payload: err.response.data
+      })
+    )
+  console.log(id)
+}
+
+// export const addLike = (id) => dispatch => {
+  
+//   console.log(id)
+// }
+
 // Add Comment
 export const addComment = (postId, newComment) => dispatch => {
   dispatch(clearErrors())

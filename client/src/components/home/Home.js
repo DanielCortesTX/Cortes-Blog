@@ -12,7 +12,7 @@ class Home extends Component {
     console.log(posts)
   }
   render() {
-    const { user, posts, loading } = this.props
+    const { posts, loading } = this.props
     let postFeed
 
     if(posts === null || loading){

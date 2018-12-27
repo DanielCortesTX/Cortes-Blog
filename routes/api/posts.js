@@ -92,4 +92,32 @@ router.post(
   }
 )
 
+// @route  GET api/posts/like/:id
+// @desc   Add like to post
+// @access Private
+router.post(
+  '/like/:id',
+  passport.authenticate('jwt', { session: false }), 
+  (req, res) => {
+    Post.findById(req.params.id)
+      .then(post => {
+        if(
+          post.likes.filter(like => like.user.toString() === req.user.id)
+          .length > 0){
+            const newLikes = post.likes.filter(like => like.user.toString() !== req.user.id)
+            console.log(newLikes)
+            post.likes = newLikes
+
+            post.save().then(post => res.json(post))
+          }
+
+        post.likes.push({ user: req.user.id })
+
+        post.save().then(post => res.json(post))
+      })
+      .catch(err => res.status(404).json({ nopostfound: 'No post found'}))
+  }
+)
+
+
 module.exports = router
