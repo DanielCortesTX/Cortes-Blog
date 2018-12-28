@@ -3,29 +3,27 @@ import Moment from 'react-moment'
 
 class CommentFeed extends Component {
   state = {
-    invert: false
+    invert: false,
+    comments: this.props.comments
   }
-  toggleInvert(){
+  toggleInvert = () => {
     
-    this.setState(() => ({
-      invert: !this.state.invert
+    this.setState((prevState) => ({
+      invert: !prevState.invert,
+      comments: prevState.comments.reverse()
     }))
     console.log(this.state.invert)
   }
   render() {
-    let comments = this.props.comments
-    if(this.state.invert){
-      comments = this.props.comments.reverse()
-    }
     return (
       <div>
         {this.props.comments.length > 0 ? 
           <div className="card card-body">
             <h1 className="mb-3">Comments:</h1>
             <div>
-            <button className="btn btn-lg btn-primary mb-3" onClick={() => this.toggleInvert()}>{this.state.invert ? <span>Press for least to most recent</span> : <span>Press for most to least recent</span>}</button>
+            <button className="btn btn-lg btn-primary mb-3" onClick={this.toggleInvert}>{this.state.invert ? <span>Press for least to most recent</span> : <span>Press for most to least recent</span>}</button>
           </div>
-            {comments.map((comment, index) => {
+            {this.state.comments.map((comment, index) => {
               return <div key={index} className="card card-body bg-dark text-white mb-3 pb-0 comment-header">
                 <Moment className="mr-4" format="MMMM Do YYYY">
                   {comment.date}
