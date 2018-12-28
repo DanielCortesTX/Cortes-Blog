@@ -55,10 +55,10 @@ class Login extends Component {
     const { errors } = this.state
 
     return (
-      <div className="login">
+      <div className="register-log">
         <div className="container">
-          <div className="m-auto">
-            <h1 className="text-center display-5">
+          <div className="m-auto display-3">
+            <h1 className="text-center display-3 lead small">
             Log In
             </h1>
             <p className=" lead
@@ -68,7 +68,7 @@ class Login extends Component {
               <div className="form-group">
                 <input 
                   type="text"
-                  className={classnames('form-control form-control-md', { 'is-invalid': errors.username
+                  className={classnames('form-control form-control-lg bg-dark text-light', { 'is-invalid': errors.username
                   })}
                   placeholder="Username"
                   name="username"
@@ -83,7 +83,7 @@ class Login extends Component {
               <div className="form-group">
                 <input 
                   type="password"
-                  className={classnames('form-control form-control-md', { 'is-invalid': errors.password
+                  className={classnames('form-control form-control-lg bg-dark text-light', { 'is-invalid': errors.password
                   })}
                   placeholder="Password"
                   name="password"
@@ -95,7 +95,7 @@ class Login extends Component {
               </div>
               <input 
                 type="submit"
-                className="btn btn-outline-primary mb-4"
+                className="btn btn-lg btn-primary mb-4"
               />
             </form>
           </div>

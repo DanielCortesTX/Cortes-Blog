@@ -22,12 +22,12 @@ class NavBar extends Component {
           >Create post</Link>
         </li>}
         <li className="nav-link">
-          <a
-            href=""
+          <p
+            // href="#"
             onClick={this.onLogoutClick.bind(this)}
             className="nav-link">
             Logout
-          </a>
+          </p>
         </li>
         <li className="nav-link">
           <p
@@ -55,12 +55,12 @@ class NavBar extends Component {
     return (
       <nav className="navbar navbar-expand-sm bg-secondary navbar-dark">
         <div className="container">
-          <Link className="navbar-brand" to="/">HomeFree</Link>
+          <Link className="navbar-brand" to="/">Get Started</Link>
 
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/home">Home</Link>
+                <Link className="nav-link" to="/home">Blog Feed</Link>
               </li>
             </ul>
             {isAuthenticated ? loggedIn : unlogged}

@@ -46,7 +46,7 @@ class CommentForm extends Component {
       <div className="form-group">
         <textarea 
           // className="form-control form-control-lg"
-          className={classnames('form-control form-control-lg lead', {
+          className={classnames('form-control form-control-lg bg-dark text-white lead', {
             'is-invalid': errors.text
             })}
           placeholder="Comment..."

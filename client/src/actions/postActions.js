@@ -57,10 +57,14 @@ export const getPost = (id) => dispatch => {
     )
 }
 
-// add like
+// add/remove like
 export const addLike = (id) => dispatch => {
   axios.post(`/api/posts/like/${id}`)
-    .then(res => dispatch(getPosts()))
+    .then(res => 
+      dispatch({
+        type: GET_POST,
+        payload: res.data
+      }))
     .catch(err =>
       dispatch({
         type: GET_POST,
@@ -69,11 +73,6 @@ export const addLike = (id) => dispatch => {
     )
   console.log(id)
 }
-
-// export const addLike = (id) => dispatch => {
-  
-//   console.log(id)
-// }
 
 // Add Comment
 export const addComment = (postId, newComment) => dispatch => {

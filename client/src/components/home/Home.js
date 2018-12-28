@@ -16,14 +16,14 @@ class Home extends Component {
     let postFeed
 
     if(posts === null || loading){
-      postFeed = <h3>Loading...</h3>
+      postFeed = <h3 className="load-adjust">Loading...</h3>
     } else {
       postFeed = posts.map((post) => <BlogLink key={post._id} post={post}/>)
     }
 
     return (
       <div className="container">
-        <h1 className="text-center text-uppercase">Cortes Corner</h1>
+        <h1 className="text-center text-uppercase lead display-4 mt-4 mb-4">Cortes Corner</h1>
           {postFeed}
       </div>
     )

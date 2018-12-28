@@ -5,11 +5,11 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing">
-        <div className="landing-inner overlay text-light">
+        <div className="landing-inner text-light">
           <div className="container">
             <div>
-              <div className="text-center">
-                <h1 className="">Cortes Blog</h1>
+              <div className="text-center display-3">
+                <h1 className="display-3 lead small">Cortes Blog</h1>
                 <p className="lead">The musings and introspection of Daniel Cortes</p>
                 <hr />
                 <Link to="/register" className="btn btn-lg btn-primary mr-2">Sign up</Link>
