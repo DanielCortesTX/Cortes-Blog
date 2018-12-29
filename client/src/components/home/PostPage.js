@@ -6,26 +6,10 @@ import CommentForm from './CommentForm'
 import CommentFeed from './CommentFeed'
 
 class PostPage extends Component {
-  // state = {
-  //   invert: false
-  // }
-  // // constructor(props){
-  //   super(props)
-    
-  //   state = state
-  // }
-  
   componentDidMount(){
     console.log(this.props.match.params.id)
     this.props.getPost(this.props.match.params.id)
   }
-  // toggleInvert(){
-    
-  //   this.setState(() => ({
-  //     invert: !this.state.invert
-  //   }))
-  //   console.log(this.state.invert)
-  // }
 
   render() {
     const { post, loading, isAuthed } = this.props

@@ -5,9 +5,6 @@ import NotOneLike from './NotOneLike'
 import { addLike } from '../../actions/postActions'
 
 class PostDisplay extends Component {
-  // constructor(){
-  //   super(pr)
-  // }
   onClickLike(id){
     this.props.addLike(id)
   }
