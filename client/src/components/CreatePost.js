@@ -100,8 +100,6 @@ class CreatePost extends Component {
 }
 
 CreatePost.propTypes = {
-  // registerUser: PropTypes.func.isRequired,
-  // auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 }
 

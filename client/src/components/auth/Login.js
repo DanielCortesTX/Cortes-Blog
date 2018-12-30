@@ -59,11 +59,14 @@ class Login extends Component {
         <div className="container">
           <div className="m-auto display-3">
             <h1 className="text-center display-3 lead small">
-            Log In
+              Log In
             </h1>
-            <p className=" lead
-            text-center">Sign in to comment
-            and like posts</p>
+            <p 
+              className=" lead
+                text-center"
+            >
+              Sign in to comment and like posts
+            </p>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <input 
@@ -75,9 +78,9 @@ class Login extends Component {
                   value={this.state.username}
                   onChange={this.onChange}
                 />
-                {errors.username && (
-                  <div className="invalid-feedback">
-                  {errors.username}</div>
+                  {errors.username && (
+                    <div className="invalid-feedback">
+                    {errors.username}</div>
                   )}
               </div>
               <div className="form-group">
@@ -90,8 +93,9 @@ class Login extends Component {
                   value={this.state.password}
                   onChange={this.onChange}
                 />
-                {errors.password && (
-                  <div className="invalid-feedback">{errors.password}</div>)}
+                  {errors.password && (
+                    <div className="invalid-feedback">{errors.password}</div>
+                  )}
               </div>
               <input 
                 type="submit"

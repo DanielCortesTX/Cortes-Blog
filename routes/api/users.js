@@ -12,11 +12,6 @@ const validateLoginInput = require('../../validation/login')
 // Load User model
 const User = require('../../models/User')
 
-// @route  GET api/users/test
-// @desc   Tests users route
-// @access Public
-router.get('/test', (req, res) => res.json({ msg: 'Users works' }))
-
 // @route  POST api/users/register
 // @desc   Register user
 // @access Public
@@ -80,8 +75,8 @@ router.post('/login', (req, res) => {
       bcrypt.compare(password, user.password).then(isMatch => {
         if(isMatch) {
           // User matched
-          const payload = { id: user.id, username: user.username } 
           // CREATE JWT PAYLOAD
+          const payload = { id: user.id, username: user.username } 
 
           // Sign Token
           jwt.sign(

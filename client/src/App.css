@@ -35,7 +35,6 @@ img {
   padding: 10px 20px;
 }
 
-
 .card-mods {
   display: flex;
   flex-direction: row;
@@ -44,15 +43,3 @@ img {
 .card-space {
   padding: 10px;
 }
-/* .card-form {
-  opacity: 0.9;
-}
-
-.latest-profiles-img {
-  width: 40px;
-  height: 40px;
-}
-
-.form-control::placeholder {
-  color: #bbb !important;
-}  */
