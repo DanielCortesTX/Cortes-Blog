@@ -21,8 +21,16 @@ img {
   height:95vh;
 }
 
+.neutral {
+  background: none;
+}
+
 .landing-inner {
   padding-top: 60px;
+}
+
+.check-align {
+  align-items: center;
 }
 
 .comment-header {

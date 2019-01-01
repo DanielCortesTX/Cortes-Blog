@@ -15,31 +15,32 @@ class NavBar extends Component {
   render() {
     const { isAuthenticated, user } = this.props.auth
 
-    const loggedIn = (
-      <ul className="navbar-nav ml-auto">
-        {user.username === 'Solidus' && <li className="nav-link">
-          <Link
-            className="nav-link p-counter"
-            to="/create-post"
-          >Create post</Link>
-        </li>}
-        <li className="nav-link">
-          <p
-            onClick={this.onLogoutClick.bind(this)}
-            className="nav-link">
-            Logout
-          </p>
-        </li>
-        <li className="nav-link">
-          <p
-            className="navbar-text p-counter"
-          >Hello {user.username}</p>
-        </li>
-      </ul>
-    )
+    // const loggedIn = (
+    //   <ul className="navbar-nav ml-auto">
+    //     {user.username === 'Solidus' && <li className="nav-item">
+    //       <Link
+    //         className="nav-link p-counter"
+    //         to="/create-post"
+    //       >Create post</Link>
+    //     </li>}
+    //     <li className="nav-link">
+    //       <p
+    //         onClick={this.onLogoutClick.bind(this)}
+    //         className="nav-link">
+    //         Logout
+    //       </p>
+    //     </li>
+    //     <li className="nav-link">
+    //       <p
+    //         className="navbar-text p-counter"
+    //       >Hello {user.username}</p>
+    //     </li>
+    //   </ul>
+    // )
 
     const unlogged = (
       <ul className="navbar-nav ml-auto">
+
         <li className="nav-item">
           <Link className="nav-link" to="/register">
             Sign up
@@ -53,19 +54,39 @@ class NavBar extends Component {
       </ul>
     )
 
+    const loggedIn = (
+      <div className="navbar-nav check-align">
+        {user.username === 'Solidus' && 
+          <Link
+            className="nav-link nav-item"
+            to="/create-post"
+          >
+            Create post
+          </Link>
+        }
+        <button
+          onClick={this.onLogoutClick.bind(this)}
+          className="nav-link nav-item neutral border-0">
+            Logout
+        </button>
+        <button
+          className="nav-link nav-item neutral border-0"
+        >
+          Hello {user.username}
+        </button>
+      </div>
+    )
+
     return (
       <nav className="navbar navbar-expand-sm bg-secondary navbar-dark">
         <div className="container">
-          <Link className="navbar-brand" to="/">Get Started</Link>
-
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/home">Blog Feed</Link>
-              </li>
-            </ul>
-            {isAuthenticated ? loggedIn : unlogged}
+          <div className="navbar-nav">
+            <Link className="navbar-brand" to="/">Get Started</Link>  
+            <Link className="nav-link nav-item" to="/home">{' '}Blog Feed</Link>
           </div>
+          <div>
+            {isAuthenticated ? loggedIn : unlogged}
+          </div>  
         </div>
       </nav>
     )
