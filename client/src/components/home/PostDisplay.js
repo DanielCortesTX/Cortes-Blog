@@ -23,8 +23,8 @@ class PostDisplay extends Component {
     }
 
     return (
-      <div className="card card-body mt-3 mb-3">
-        <h2 className="text-center text-uppercased display-4 lead">{post.title}</h2>
+      <div className="card card-body mt-3 mb-4">
+        <h2 className="text-center text-uppercased display-4 lead pt-3 pb-3">{post.title}</h2>
         <div className="card post-display bg-dark text-white lead mb-4 border-white">{post.text}</div>
         <div>
           {isAuthed && 

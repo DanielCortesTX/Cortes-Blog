@@ -22,9 +22,9 @@ class PostPage extends Component {
       postDisplay = <h3 className="load-adjust">Loading...</h3>
     } else {
       postDisplay = (
-        <div className="">
+        <div className="p-4">
           <PostDisplay post={post}/>
-          {isAuthed ? <CommentForm postId={post._id}/> : <h1 className="lead mb-3">Sign in to make comments and mark as interesting</h1>}
+          {isAuthed ? <CommentForm postId={post._id}/> : <h1 className="lead mb-4 px-4">Sign in to make comments and mark as interesting</h1>}
           <CommentFeed comments={post.comments}/>
         </div>
       )

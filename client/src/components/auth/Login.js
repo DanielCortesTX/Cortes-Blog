@@ -60,12 +60,12 @@ class Login extends Component {
       <div className="register-log">
         <div className="container">
           <div className="m-auto display-3">
-            <h1 className="text-center display-3 lead small">
+            <h1 className="text-center display-3 lead small mt-4">
               Log In
             </h1>
             <p 
               className=" lead
-                text-center"
+                text-center mb-4"
             >
               Sign in to comment and like posts
             </p>

@@ -60,9 +60,9 @@ class Register extends Component {
       <div className="register-log">
         <div className="container">
           <div className="m-auto display-3">
-            <h1 className="text-center display-3 lead small">Sign up
+            <h1 className="text-center display-3 lead small mt-4">Sign up
             </h1>
-            <p className="lead text-center">Create a username to comment and like posts</p>
+            <p className="lead text-center mb-4">Create a username to comment and like posts</p>
             <form onSubmit={this.onSubmit}>
               <div noValidate className="form-group">
                 <input 

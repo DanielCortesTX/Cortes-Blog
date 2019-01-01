@@ -24,8 +24,8 @@ class Home extends Component {
     }
 
     return (
-      <div className="container">
-        <h1 className="text-center text-uppercase lead display-4 mt-4 mb-4">Cortes Corner</h1>
+      <div className="container p-4">
+        <h1 className="text-center text-uppercase lead display-4 mt-4 mb-4 pb-4">Cortes Corner</h1>
           {postFeed}
       </div>
     )

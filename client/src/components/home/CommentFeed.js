@@ -9,9 +9,9 @@ class CommentFeed extends Component {
       <div>
         {this.props.comments.length > 0 ? 
           <div className="card card-body">
-            <h1 className="mb-3">Comments:</h1>
+            <h1 className="mb-1">Comments:</h1>
             {this.props.comments.map((comment, index) => {
-              return <div key={index} className="card card-body bg-dark text-white mb-3 pb-1 comment-header">
+              return <div key={index} className="card card-body bg-dark text-white my-3 py-2 comment-header">
               <div className="d-flex flex-column">
                 <Moment className="mr-4" format="h:mm a">
                   {comment.date}

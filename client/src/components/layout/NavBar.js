@@ -78,7 +78,7 @@ class NavBar extends Component {
     )
 
     return (
-      <nav className="navbar navbar-expand-sm bg-secondary navbar-dark">
+      <nav className="navbar navbar-expand-sm bg-secondary navbar-dark p-3">
         <div className="container">
           <div className="navbar-nav">
             <Link className="navbar-brand" to="/">Get Started</Link>  
