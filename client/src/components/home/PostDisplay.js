@@ -4,6 +4,8 @@ import SingleLike from './SingleLike'
 import NotOneLike from './NotOneLike'
 import { addLike } from '../../actions/postActions'
 
+// @desc Renders a blog post. Has ability to add a "like" to post if a user is logged in.
+
 class PostDisplay extends Component {
   onClickLike(id){
     this.props.addLike(id)

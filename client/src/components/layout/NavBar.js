@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { logoutUser } from '../../actions/authActions'
 
+// @desc Navbar has different links depending on if user is logged in or is logged in as administrator
+
 class NavBar extends Component {
   onLogoutClick(e) {
     e.preventDefault()

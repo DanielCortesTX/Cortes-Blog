@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Moment from 'react-moment'
 
+// @desc Component displays particulars of a post with a link to view the post in full.
+
 class BlogLink extends Component {
   render() {
     const { post } = this.props

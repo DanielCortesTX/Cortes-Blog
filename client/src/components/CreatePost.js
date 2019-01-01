@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { addPost } from '../actions/postActions'
 
+// @desc Page can only be accessed by administrator. Ability to create and submit new posts. Inputs for title and text of post are handled locally.
 
 class CreatePost extends Component {
   constructor(props){

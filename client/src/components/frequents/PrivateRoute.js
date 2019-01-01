@@ -3,6 +3,8 @@ import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
+// @desc Route is used for administrator and handling of unauthorized users.
+
 const PrivateRoute = ({ component: Component, auth, ...rest}) => (
   <Route 
     {...rest}

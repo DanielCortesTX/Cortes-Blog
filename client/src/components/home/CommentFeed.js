@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Moment from 'react-moment'
 
+// @desc Handles display if no comments are passed in. Maps comments with display giving particulars in order of creation.
+
 class CommentFeed extends Component {
   render() {
     return (

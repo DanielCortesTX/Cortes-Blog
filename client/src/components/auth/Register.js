@@ -5,6 +5,8 @@ import classnames from 'classnames'
 import { connect } from 'react-redux'
 import { registerUser } from '../../actions/authActions'
 
+// @desc Local state handles input for passwords, name and errors. Errors are passed in from errors reducer.
+
 class Register extends Component {
   constructor(){
     super()

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+// @desc component is rendered whenever number of likes does not equal one for proper sentence structure.
+
 export default class NotOneLike extends Component {
   render() {
     return (

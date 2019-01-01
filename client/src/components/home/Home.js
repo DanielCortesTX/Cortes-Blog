@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import BlogLink from './BlogLink'
 import { getPosts } from '../../actions/postActions'
 
+// @desc Inherits loading property until posts are returned from store. Posts are mapped through and given BlogLink component to display information.
+
 class Home extends Component {
   componentDidMount(){
     const { user, posts } = this.props

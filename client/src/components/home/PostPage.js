@@ -5,6 +5,8 @@ import PostDisplay from './PostDisplay'
 import CommentForm from './CommentForm'
 import CommentFeed from './CommentFeed'
 
+// @desc Renders the post and comment feed. Renders comment form if user is logged in.
+
 class PostPage extends Component {
   componentDidMount(){
     console.log(this.props.match.params.id)

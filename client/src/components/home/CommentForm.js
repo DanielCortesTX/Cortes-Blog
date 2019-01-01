@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { addComment } from '../../actions/postActions'
 import classnames from 'classnames'
  
+// @desc Local state handles text input and errors. Errors are passed in as props from error reducer. Logged user is inherited and used in new comment creation.
+
 class CommentForm extends Component {
   constructor(props){
     super(props)
