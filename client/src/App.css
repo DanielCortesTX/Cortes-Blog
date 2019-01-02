@@ -3,7 +3,7 @@ img {
 }
 
 .register-log {
-  height: 82vh;
+  height: 100vh;
 }
 
 .load-adjust {
@@ -18,7 +18,7 @@ img {
   background: url('img/perspective.JPG');
   background-size: cover;
   background-position: 50% 35%;
-  height:95vh;
+  height:100vh;
 }
 
 .neutral {

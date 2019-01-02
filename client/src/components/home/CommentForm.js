@@ -47,7 +47,7 @@ class CommentForm extends Component {
               className={classnames('form-control form-control-lg bg-dark text-white lead', {
                 'is-invalid': errors.text
                   })}
-              placeholder="Comment..."
+              placeholder="Comment must be between 2 and 500 characters"
               name="text"
               value={this.state.text}
               onChange={this.onChange}
