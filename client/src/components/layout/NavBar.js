@@ -15,29 +15,6 @@ class NavBar extends Component {
   render() {
     const { isAuthenticated, user } = this.props.auth
 
-    // const loggedIn = (
-    //   <ul className="navbar-nav ml-auto">
-    //     {user.username === 'Solidus' && <li className="nav-item">
-    //       <Link
-    //         className="nav-link p-counter"
-    //         to="/create-post"
-    //       >Create post</Link>
-    //     </li>}
-    //     <li className="nav-link">
-    //       <p
-    //         onClick={this.onLogoutClick.bind(this)}
-    //         className="nav-link">
-    //         Logout
-    //       </p>
-    //     </li>
-    //     <li className="nav-link">
-    //       <p
-    //         className="navbar-text p-counter"
-    //       >Hello {user.username}</p>
-    //     </li>
-    //   </ul>
-    // )
-
     const unlogged = (
       <ul className="navbar-nav ml-auto">
 
