@@ -25,7 +25,7 @@ class PostDisplay extends Component {
     return (
       <div className="card card-body mt-3 mb-4">
         <h2 className="text-center text-uppercased display-4 lead pt-3 pb-3">{post.title}</h2>
-        <div className="card post-display bg-dark text-white lead mb-4 border-white">{post.text}</div>
+        <div className="card post-display bg-dark text-white lead mb-4 border-white p-4">{post.text}</div>
         <div>
           {isAuthed && 
             <button type="button" className="btn btn-light bg-dark text-light comment-header" onClick={() => this.onClickLike(post._id)}>
