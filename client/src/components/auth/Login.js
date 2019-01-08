@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import classnames from 'classnames'
 import { loginUser } from '../../actions/authActions'
 
@@ -21,7 +22,7 @@ class Login extends Component {
 
   componentDidMount() {
     if(this.props.auth.isAuthenticated){
-      this.props.history.push('/')
+      this.props.history.push('/home')
     }
   }
 
@@ -50,7 +51,7 @@ class Login extends Component {
       password: this.state.password
     }
 
-    this.props.loginUser(user)
+    this.props.loginUser(user, this.props.history)
   }
 
   render() {
@@ -122,4 +123,4 @@ const mapStateToProps = (state) => ({
   errors: state.errors
 })
 
-export default connect(mapStateToProps, { loginUser })(Login)
+export default connect(mapStateToProps, { loginUser })(withRouter(Login))
