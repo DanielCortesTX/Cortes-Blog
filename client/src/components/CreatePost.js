@@ -79,6 +79,7 @@ class CreatePost extends Component {
                   'is-invalid': errors.title
                 })}
                 placeholder="Make post here."
+                rows='8'
                 name="text"
                 value={this.state.text}
                 onChange={this.onChange}
