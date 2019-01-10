@@ -22,7 +22,7 @@ class CommentFeed extends Component {
                 </div>
                 <div>
                   <h4 className="mr-4">{comment.username}</h4>
-                  <p className="lead">{comment.text} </p>
+                  <p className="lead white-space">{comment.text} </p>
                 </div>
               </div>
             })}
