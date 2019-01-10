@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import SingleLike from './SingleLike'
-import NotOneLike from './NotOneLike'
-import { addLike } from '../../actions/postActions'
+import SingleLike from './like-displays/SingleLike'
+import NotOneLike from './like-displays/NotOneLike'
+import { addLike } from '../../../actions/postActions'
 
 // @desc Renders a blog post. Has ability to add a "like" to post if a user is logged in.
 

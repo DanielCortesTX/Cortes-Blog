@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getPost, addLike } from '../../actions/postActions'
+import { getPost, addLike } from '../../../actions/postActions'
 import PostDisplay from './PostDisplay'
 import CommentForm from './CommentForm'
 import CommentFeed from './CommentFeed'
