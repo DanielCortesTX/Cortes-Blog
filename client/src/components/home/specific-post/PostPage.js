@@ -9,7 +9,6 @@ import CommentFeed from './CommentFeed'
 
 class PostPage extends Component {
   componentDidMount(){
-    console.log(this.props.match.params.id)
     this.props.getPost(this.props.match.params.id)
   }
 
