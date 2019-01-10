@@ -71,7 +71,6 @@ export const addLike = (id) => dispatch => {
         payload: err.response.data
       })
     )
-  console.log(id)
 }
 
 // Add Comment

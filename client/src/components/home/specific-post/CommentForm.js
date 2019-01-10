@@ -33,7 +33,6 @@ class CommentForm extends Component {
     }
 
     this.props.addComment(postId, newComment)
-    console.log(newComment, postId)
     this.setState({ text: '' })
   }
 
