@@ -7,11 +7,7 @@ import { getPosts } from '../../actions/postActions'
 
 class Home extends Component {
   componentDidMount(){
-    const { user, posts } = this.props
     this.props.getPosts()
-
-    console.log(user)
-    console.log(posts)
   }
   render() {
     const { posts, loading } = this.props
