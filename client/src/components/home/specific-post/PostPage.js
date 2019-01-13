@@ -4,6 +4,7 @@ import { getPost, addLike } from '../../../actions/postActions'
 import PostDisplay from './PostDisplay'
 import CommentForm from './CommentForm'
 import CommentFeed from './CommentFeed'
+import classnames from 'classnames'
 
 // @desc Renders the post and comment feed. Renders comment form if user is logged in.
 
@@ -21,7 +22,7 @@ class PostPage extends Component {
       postDisplay = <h3 className="load-adjust">Loading...</h3>
     } else {
       postDisplay = (
-        <div className="p-4 post-page-buffer">
+        <div className={classnames('p-4', { 'load-adjust': post.text.length < 100})}>
           <PostDisplay post={post}/>
           {isAuthed ? <CommentForm postId={post._id}/> : <h1 className="lead mb-4 px-4">Sign in to make comments and mark as interesting</h1>}
           <CommentFeed comments={post.comments}/>
