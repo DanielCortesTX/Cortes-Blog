@@ -7,7 +7,7 @@ INSTALLATION
 
 * clone the application from github: 
 
-  https://github.com/Schyenindogu/Cortes-Blog
+  https://github.com/DanielCortesTX/Cortes-Blog
 
 * after loading the application, install the dependencies for the backend of the project by navigating to the root file for the project in the command line and run:
 
@@ -17,9 +17,11 @@ INSTALLATION
 
   npm install
 
+* The application uses MongoDB to store data. In config folder, create keys_dev.js file and set up your preference for local or online database.  
+
 LAUNCHING
 
-* in command line, run:
+* in command line, in project main directory, run:
 
 npm run dev 
 
