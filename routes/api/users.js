@@ -80,7 +80,6 @@ router.post('/login', (req, res) => {
           // let admin = user.admin
           if(user.admin === keys.admin){
             admin = 'administrator'
-            console.log(user.admin)
           } else {
             admin = 'not'
           }

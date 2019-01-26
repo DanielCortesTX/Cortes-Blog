@@ -9,7 +9,7 @@ const PrivateRoute = ({ component: Component, auth, ...rest}) => (
   <Route 
     {...rest}
     render={props =>
-      auth.user.username === 'Solidus' ? (
+      auth.isAdmin === 'administrator' ? (
         <Component {...props} />
       ) : (
         <Redirect to="/home" />

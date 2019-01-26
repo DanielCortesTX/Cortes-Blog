@@ -13,7 +13,7 @@ class NavBar extends Component {
   }
 
   render() {
-    const { isAuthenticated, user } = this.props.auth
+    const { isAuthenticated, user, isAdmin } = this.props.auth
 
     const unlogged = (
       <ul className="navbar-nav ml-auto">
@@ -33,7 +33,7 @@ class NavBar extends Component {
 
     const loggedIn = (
       <div className="navbar-nav check-align">
-        {user.username === 'Solidus' && 
+        {isAdmin === 'administrator' && 
           <Link
             className="nav-link nav-item"
             to="/create-post"
