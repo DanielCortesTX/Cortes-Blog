@@ -75,8 +75,18 @@ router.post('/login', (req, res) => {
       bcrypt.compare(password, user.password).then(isMatch => {
         if(isMatch) {
           // User matched
+          // check if administrator
+
+          // let admin = user.admin
+          if(user.admin === keys.admin){
+            admin = 'administrator'
+            console.log(user.admin)
+          } else {
+            admin = 'not'
+          }
+
           // CREATE JWT PAYLOAD
-          const payload = { id: user.id, username: user.username } 
+          const payload = { id: user.id, username: user.username, isAdmin: admin } 
 
           // Sign Token
           jwt.sign(

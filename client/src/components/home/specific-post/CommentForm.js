@@ -26,6 +26,8 @@ class CommentForm extends Component {
   onSubmit(e) {
     e.preventDefault()
     const { postId } = this.props
+    // const filter = new Filter()
+    // console.log(filter.clean(this.state.text))
 
     const newComment = {
       text: this.state.text,
