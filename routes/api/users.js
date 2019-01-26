@@ -77,7 +77,7 @@ router.post('/login', (req, res) => {
           // User matched
           // check if administrator
 
-          // let admin = user.admin
+          let admin = user.admin
           if(user.admin === keys.admin){
             admin = 'administrator'
           } else {

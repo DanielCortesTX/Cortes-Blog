@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 // const mongoose = require('mongoose')
+const Filter = require('bad-words')
 const passport = require('passport')
 
 // Load Post model
@@ -73,8 +74,10 @@ router.post(
     }
     Post.findById(req.params.id)
       .then(post => {
+        let filter = new Filter()
+        let textCheck = filter.clean(req.body.text)
         const newComment = {
-          text: req.body.text,
+          text: textCheck,
           username: req.body.username,
           user: req.user.id
         }
