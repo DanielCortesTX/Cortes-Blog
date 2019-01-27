@@ -17,7 +17,7 @@ INSTALLATION
 
   npm install
 
-* The application uses MongoDB to store data. In config folder, create keys_dev.js file and set up your preference for local or online database.  
+* The application uses MongoDB to store data. In config folder, create keys_dev.js file and set up your preference for local or online database. MongoURI, sercretOrkey and admin keyword will need to be provided.
 
 LAUNCHING
 
