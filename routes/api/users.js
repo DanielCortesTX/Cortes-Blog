@@ -28,7 +28,7 @@ router.post('/register', (req, res) => {
       errors.username = 'Username already exists'
       return res.status(400).json(errors)
     } else {
-      
+
       const newUser = new User({
         username: req.body.username,
         password: req.body.password
