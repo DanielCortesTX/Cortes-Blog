@@ -21,9 +21,11 @@ class Home extends Component {
     }
 
     return (
-      <div className={classnames('container, p-4', { 'load-adjust': posts.length < 3})}>
+      <div className={classnames('p-4', { 'load-adjust': posts.length < 3})}>
+        <div className="card mt-3">
         <h1 className="text-center text-uppercase lead display-4 mt-4 mb-4 pb-4">Cortes Corner</h1>
           {postFeed}
+        </div>  
       </div>
     )
   }

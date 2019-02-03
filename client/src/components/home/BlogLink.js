@@ -8,11 +8,11 @@ class BlogLink extends Component {
   render() {
     const { post } = this.props
     return (
-      <div className="card card-body bg-dark text-white card-mods mb-4 ml-4 mr-4">
+      <div className="card card-body bg-dark text-white mb-4 ml-4 mr-4">
         <Moment className="mr-4" format="MMMM Do YYYY">
           {post.date}
         </Moment>
-        <div>
+        <div className="mr-4">
           <div>
             <h4>
               {post.title}
@@ -20,7 +20,7 @@ class BlogLink extends Component {
           </div>
           <div>
             <p>
-              {post.text.slice(0, 75)}...
+              {post.text.slice(0, 150)}...
             </p>
           </div>
           <div>
