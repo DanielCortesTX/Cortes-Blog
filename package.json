@@ -25,7 +25,7 @@
     "passport-jwt": "^4.0.0",
     "validator": "^10.9.0"
   },
-  "resolutions": {
-    "terser": "3.14.1"
+  "devDependencies": {
+    "terser": "^3.14.1"
   }
 }
