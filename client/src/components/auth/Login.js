@@ -57,10 +57,10 @@ class Login extends Component {
     const { errors } = this.state
 
     return (
-      <div className="register-log">
+      <div className="register">
         <div className="container">
-          <div className="m-auto display-3">
-            <h1 className="text-center display-3 lead small mt-4">
+          <div className="m-auto">
+            <h1 className="text-center display-3 mt-4">
               Log In
             </h1>
             <p 
@@ -103,6 +103,9 @@ class Login extends Component {
                 type="submit"
                 className="btn btn-lg btn-primary mb-4"
               />
+              <br/>
+            <br/>
+            <br/>
             </form>
           </div>
         </div>

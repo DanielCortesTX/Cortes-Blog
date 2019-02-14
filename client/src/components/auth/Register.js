@@ -57,16 +57,15 @@ class Register extends Component {
     const { errors } = this.state
 
     return (
-      <div className="register-log">
+      <div className="register">
         <div className="container">
-          <div className="m-auto display-3">
-            <h1 className="text-center display-3 lead small mt-4">Sign up
+          <div className="m-auto">
+            <h1 className="text-center display-3 mt-4">Sign up
             </h1>
             <p className="lead text-center mb-4">Create a username to comment and like posts</p>
-            <form onSubmit={this.onSubmit}>
-              <div noValidate className="form-group">
+            <form noValidate onSubmit={this.onSubmit}>
+              <div className="form-group">
                 <input 
-                  type="text"
                   className={classnames('form-control form-control-lg bg-dark text-light', {
                     'is-invalid': errors.username
                   })}
@@ -75,10 +74,10 @@ class Register extends Component {
                   value={this.state.username}
                   onChange={this.onChange}
                 />
-                  {errors.username && (<div
+                  {errors.username && <div
                     className="invalid-feedback">
                     {errors.username}</div>
-                  )}
+                  }
               </div>
               <div className="form-group">
                 <input 
@@ -115,6 +114,9 @@ class Register extends Component {
                   className="btn btn-lg btn-primary mb-4"
               />
             </form>
+            <br/>
+            <br/>
+            <br/>
           </div>
         </div>
       </div>
