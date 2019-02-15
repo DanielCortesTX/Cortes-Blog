@@ -62,7 +62,9 @@ class Register extends Component {
           <div className="m-auto">
             <h1 className="text-center display-3 mt-4">Sign up
             </h1>
+            <br/>
             <p className="lead text-center mb-4">Create a username to comment and like posts</p>
+            <br/>
             <form noValidate onSubmit={this.onSubmit}>
               <div className="form-group">
                 <input 
@@ -79,6 +81,7 @@ class Register extends Component {
                     {errors.username}</div>
                   }
               </div>
+              <br/>
               <div className="form-group">
                 <input 
                   type="password"
@@ -94,6 +97,7 @@ class Register extends Component {
                 className="invalid-feedback">
                 {errors.password}</div>)}
               </div>
+              <br/>
               <div className="form-group">
                 <input 
                   type="password"
