@@ -57,7 +57,7 @@ class Login extends Component {
     const { errors } = this.state
 
     return (
-      <div className="register">
+      <div className="register-log">
         <div className="container">
           <div className="m-auto">
             <h1 className="text-center display-3 mt-4">
@@ -87,7 +87,7 @@ class Login extends Component {
                     {errors.username}</div>
                   )}
               </div>
-              <br/>
+              
               <br/>
               <div className="form-group">
                 <input 
@@ -99,7 +99,7 @@ class Login extends Component {
                   value={this.state.password}
                   onChange={this.onChange}
                 />
-                <br/>
+                
                   {errors.password && (
                     <div className="invalid-feedback">{errors.password}</div>
                   )}
