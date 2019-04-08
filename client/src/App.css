@@ -2,12 +2,17 @@ img {
   width: 100%;
 }
 
+.testHeight {
+  height: 100%;
+}
+
 .register-log {
   height: 100vh;
 }
 
 .load-adjust {
-  height: 85vh
+  height: 85vh;
+  /* color: green; */
 }
 
 .p-counter {
