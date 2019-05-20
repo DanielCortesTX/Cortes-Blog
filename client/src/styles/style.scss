@@ -1,12 +1,11 @@
 @import './base/base';
+@import './spacing/spacing';
+@import './small/smallAdjust';
+@import './component/landing';
 
-.sass-test {
-  color: $darkblue;
-}
-
-img {
-  width: 100%;
-}
+// img {
+//   width: 100%;
+// }
 
 .testHeight {
   height: 100%;
@@ -16,38 +15,9 @@ img {
   height: 100vh;
 }
 
-.load-adjust {
-  height: 85vh;
-}
-
 .p-counter {
   margin: 0px;
 } 
-
-.landing {
-  background: url('../img/perspective.JPG');
-  background-size: cover;
-  background-position: 50% 35%;
-  height:100vh;
-}
-
-.neutral {
-  background: none;
-}
-
-.landing-inner {
-  padding-top: 60px;
-}
-
-.check-align {
-  align-items: center;
-}
-
-.comment-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
 .post-display {
   padding: 10px 20px;
