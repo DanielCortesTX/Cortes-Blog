@@ -16,6 +16,7 @@ import PostPage from './components/home/specific-post/PostPage'
 import CreatePost from './components/CreatePost'
 
 import './App.scss'
+import './styles/style.scss'
 import PrivateRoute from './components/frequents/PrivateRoute';
 
 // Check for token
