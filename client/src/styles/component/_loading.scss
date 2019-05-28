@@ -1,0 +1,33 @@
+.loader {
+  border: 16px solid black;
+  border-top-color: blue;
+  border-bottom-color: green;
+  border-radius: 50%;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  animation: coloredspin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coloredspin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    border-top-color: green;
+    border-bottom-color: blue;
+    transform: rotate(360deg) scale(1.1);
+  }
+  100%{
+    transform: rotate(720deg) scale(1);
+  }
+}

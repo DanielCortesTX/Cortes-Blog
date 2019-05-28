@@ -4,6 +4,8 @@ import BlogLink from './BlogLink'
 import { getPosts } from '../../actions/postActions'
 import classnames from 'classnames'
 
+import Loading from '../frequents/Loading'
+
 // @desc Inherits loading property until posts are returned from store. Posts are mapped through and given BlogLink component to display information.
 
 class Home extends Component {
@@ -15,7 +17,7 @@ class Home extends Component {
     let postFeed
 
     if(posts === null || loading){
-      postFeed = <h3 className="load-adjust">Loading...</h3>
+      postFeed = <Loading />
     } else {
       postFeed = posts.map((post) => <BlogLink key={post._id} post={post}/>)
     }
