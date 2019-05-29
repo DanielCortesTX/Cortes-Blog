@@ -4,6 +4,7 @@ import { getPost, addLike } from '../../../actions/postActions'
 import PostDisplay from './PostDisplay'
 import CommentForm from './CommentForm'
 import CommentFeed from './CommentFeed'
+import Loading from '../../frequents/Loading'
 import classnames from 'classnames'
 
 // @desc Renders the post and comment feed. Renders comment form if user is logged in.
@@ -19,7 +20,7 @@ class PostPage extends Component {
     let postDisplay
 
     if(post === null || loading || Object.keys(post).length === 0){
-      postDisplay = <h3 className="load-adjust">Loading...</h3>
+      postDisplay = <Loading />
     } else {
       postDisplay = (
         <div className={classnames('p-5', { 'my-5': post.comments.length === 0 && !isAuthed})}>
