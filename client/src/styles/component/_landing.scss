@@ -4,9 +4,12 @@
   background: url('../img/perspective.JPG');
   background-size: cover;
   background-position: 50% 35%;
-  height:100vh;
+  height: 90vh;
+  padding-top: 60px;
 }
 
-.landing-inner {
-  padding-top: 60px;
+@media(max-width: 576px){
+  .landing {
+    height: 80vh;
+  }
 }
