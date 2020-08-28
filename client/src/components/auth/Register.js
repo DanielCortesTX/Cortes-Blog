@@ -57,72 +57,66 @@ class Register extends Component {
     const { errors } = this.state
 
     return (
-      <div className="register">
-        <div className="container">
-          <div className="m-auto">
-            <h1 className="text-center display-3 mt-4">Sign up
-            </h1>
-            <br/>
-            <p className="lead text-center mb-4">Create a username to comment and like posts</p>
-            <br/>
-            <form noValidate onSubmit={this.onSubmit}>
-              <div className="form-group">
-                <input 
-                  className={classnames('form-control form-control-lg bg-dark text-light', {
-                    'is-invalid': errors.username
-                  })}
-                  placeholder="Username"
-                  name="username"
-                  value={this.state.username}
-                  onChange={this.onChange}
-                />
-                  {errors.username && <div
-                    className="invalid-feedback">
-                    {errors.username}</div>
-                  }
-              </div>
-              <br/>
-              <div className="form-group">
-                <input 
-                  type="password"
-                  className={classnames('form-control form-control-lg bg-dark text-light', {
-                    'is-invalid': errors.password
-                  })}
-                  placeholder="Password"
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.onChange}
-                />
-                {errors.password && (<div
+      <div className="temp-register">
+        <h1 className="text-center display-3 mt-4">Sign up</h1>
+        <br/>
+        <p className="lead text-center mb-4">Create a username to comment and like posts</p>
+        <br/>
+        <form noValidate onSubmit={this.onSubmit}>
+          <div className="form-group">
+            <input 
+              className={classnames('form-control form-control-lg bg-dark text-light', {
+                'is-invalid': errors.username
+              })}
+              placeholder="Username"
+              name="username"
+              value={this.state.username}
+              onChange={this.onChange}
+            />
+              {errors.username && <div
                 className="invalid-feedback">
-                {errors.password}</div>)}
-              </div>
-              <br/>
-              <div className="form-group">
-                <input 
-                  type="password"
-                  className={classnames('form-control form-control-lg bg-dark text-light', {
-                    'is-invalid': errors.password2
-                  })}
-                  placeholder="Confirm Password"
-                  name="password2"
-                  value={this.state.password2}
-                  onChange={this.onChange}
-                />
-                {errors.password2 && (<div
-                className="invalid-feedback">
-                {errors.password2}</div>)}
-              </div>
-              <input 
-                  type="submit"
-                  className="btn btn-lg btn-primary mb-4"
-              />
-            </form>
-            <br/>
-            <br/>
-            <br/>
+                {errors.username}</div>
+              }
           </div>
-        </div>
+          <br/>
+          <div className="form-group">
+            <input 
+              type="password"
+              className={classnames('form-control form-control-lg bg-dark text-light', {
+                'is-invalid': errors.password
+              })}
+              placeholder="Password"
+              name="password"
+              value={this.state.password}
+              onChange={this.onChange}
+            />
+            {errors.password && (<div className="invalid-feedback">
+              {errors.password}</div>)}
+          </div>
+          <br/>
+          <div className="form-group">
+            <input 
+              type="password"
+              className={classnames('form-control form-control-lg bg-dark text-light', {
+                'is-invalid': errors.password2
+              })}
+              placeholder="Confirm Password"
+              name="password2"
+              value={this.state.password2}
+              onChange={this.onChange}
+            />
+            {errors.password2 && (<div
+              className="invalid-feedback">
+                {errors.password2}</div>)}
+          </div>
+          <input 
+            type="submit"
+            className="btn btn-lg btn-primary mb-4"
+          />
+        </form>
+        <br/>
+        <br/>
+        <br/>
       </div>
     )
   }
