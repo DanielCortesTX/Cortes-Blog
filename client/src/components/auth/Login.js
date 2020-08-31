@@ -57,9 +57,7 @@ class Login extends Component {
     const { errors } = this.state
 
     return (
-      <div className="register-log">
-        <div className="container">
-          <div className="m-auto">
+      <div className="temp-register">
             <h1 className="text-center display-3 mt-4">
               Log In
             </h1>
@@ -111,8 +109,6 @@ class Login extends Component {
             <br/>
             <br/>
             </form>
-          </div>
-        </div>
       </div>
     )
   }
